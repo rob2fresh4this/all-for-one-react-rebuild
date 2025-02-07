@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/gley_ult.png";
 import { eightBall } from "../Service/RAnythingDataServices.js";
 

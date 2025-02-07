@@ -1,5 +1,4 @@
 import React, { useState } from "react";// useState is a Hook that lets you add React state to function components
-import "../../app.css";// imports the .css file
 import Valby from '../../assets/Assets_All-for-one/Valby.png';// imports the image file not to important
 import { sayHello } from "../Service/HelloDataServices.js";// imports the sayHello function from the SayHelloService file
 

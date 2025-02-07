@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/Ajax.png";
 import { askQuestion } from "../Service/QuestionServiceData.js";
 

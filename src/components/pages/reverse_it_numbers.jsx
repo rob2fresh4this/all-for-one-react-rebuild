@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/Hailey.png";
 import { ReverseItNum } from "../Service/RNumDataSevices";
 

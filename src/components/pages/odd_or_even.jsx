@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/Freyna.png";
+import { isOddOrEven } from "../Service/EvenOddDataServices.js";
 
 const OddOrEven = () => {
     const [output, setOutput] = useState("");
     const [num1, setNum1] = useState("");
-
-    async function isOddOrEven(num1) {
-        const response = await fetch(`https://allforone2-asadawb9axdvc9a9.westus-01.azurewebsites.net/OddOrEven/AddOddOrEven/${num1}`);
-        const data = await response.text();
-        console.log(data);
-        return data;
-    }
 
     const updateOutput = async () => {
         console.log("updateOutput");

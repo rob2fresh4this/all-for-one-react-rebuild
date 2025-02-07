@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/Viessa.png";
+import { getRestaurant } from "../Service/PickerDataServices.js";
 
 const restaurantPicker = () => {
 
     const [output, setOutput] = useState("");
-
-    async function getRestaurant(picked) {
-        const response = await fetch(`https://allforone2-asadawb9axdvc9a9.westus-01.azurewebsites.net/RestaurantPicker/pickRestaurant/${picked}`);
-        const data = await response.text();
-        console.log(data);
-        return data;
-    }
 
     const mexican = async () => {
         console.log("mexican");

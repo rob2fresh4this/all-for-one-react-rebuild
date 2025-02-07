@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/Sharen.png";
+import { geaterOrLess } from "../Service/LessGreatDataServices.js";
 
 const GreaterOrLess = () => {
     const [output, setOutput] = useState("");
     const [input, setInput] = useState("");
     const [input2, setInput2] = useState("");
-
-    async function geaterOrLess(input, input2) {
-        const response = await fetch(`https://minichallengetwotofour-endpoints.azurewebsites.net/LessThenGreaterThen/lessThenGreaterThen/${input}/${input2}`);
-        const data = await response.text();
-        console.log(data);
-        return data;
-    }
 
     const updateOutput = async () => {
         console.log("updateOutput");

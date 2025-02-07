@@ -1,17 +1,12 @@
 import React, { useState } from "react";// useState is a Hook that lets you add React state to function components
 import "../../app.css";// imports the .css file
 import Valby from '../../assets/Assets_All-for-one/Valby.png';// imports the image file not to important
+import { sayHello } from "../Service/HelloDataServices.js";// imports the sayHello function from the SayHelloService file
 
 const SayHello = () => {
 
     const [helloText, setHelloText] = useState("");// used a useState to update the helloText
     const [userName, setName] = useState("");// used a useState to get the value of the input field and pass it to the sayHello text
-
-    async function sayHello(name) {// simple fetch function that gets the name and returns the data
-        const response = await fetch(`https://allforone2-asadawb9axdvc9a9.westus-01.azurewebsites.net/SayHello/SayHelloTo?name=${name}`);
-        const data = await response.text();
-        return data;
-    }
 
     const updateHelloText = async () => {// updates the helloText with the name
         console.log("updateHelloText");// to verify that the function is running

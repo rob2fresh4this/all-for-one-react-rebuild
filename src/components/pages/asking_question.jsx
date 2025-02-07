@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/Ajax.png";
+import { askQuestion } from "../Service/QuestionServiceData.js";
 
 const asking_question = () => {
     const [output, setOutput] = useState("");
     const [name, setName] = useState("");
     const [time, setTime] = useState("");
-
-    async function askQuestion(name, time) {
-        const response = await fetch(`https://allforone2-asadawb9axdvc9a9.westus-01.azurewebsites.net/AskingQuestions/SetReply/${name}/${time}`);
-        const data = await response.text();
-        console.log(data);
-        return data;
-    }
 
     const updateOutput = async () => {
         console.log("updateOutput");

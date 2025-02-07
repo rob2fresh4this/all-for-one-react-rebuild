@@ -1,21 +1,15 @@
 import React, { useState } from "react";
 import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/Hailey.png";
+import { ReverseItNum } from "../Service/RNumDataSevices";
 
 const ReverseNumbers = () => {
     const [output, setOutput] = useState("");
     const [input, setInput] = useState("");
 
-    async function eightBall(input) {
-        const response = await fetch(`https://allforone2-asadawb9axdvc9a9.westus-01.azurewebsites.net/ReverseItNumbersOnly/AddReverseItNumbersOnly/${input}`);
-        const data = await response.text();
-        console.log(data);
-        return data;
-    }
-
     const updateOutput = async () => {
         console.log("updateOutput");
-        const text = await eightBall(input);
+        const text = await ReverseItNum(input);
         setOutput(text);
     }
 

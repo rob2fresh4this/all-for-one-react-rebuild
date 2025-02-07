@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/Sharen.png";
+import { generateMadLib } from "../Service/MadlibDataSevices.js";
 
 // left notes so i can remember what each part of the code does
 const MadLib = () => {
@@ -26,17 +27,6 @@ const MadLib = () => {
         if (Object.values(inputs).some(value => value === "")) {// to check if the input is empty
             setOutput("Please fill out all fields.");
             return;
-        }
-
-        async function generateMadLib(data) {
-            const apiUrl = `https://allforone2-asadawb9axdvc9a9.westus-01.azurewebsites.net/MadLib/MadLib?` +
-                `animal1=${data.animal}&container1=${data.container1}&leastFavColor=${data.leastFavColor}` +
-                `&bodyCovering=${data.bodyCovering}&verb1=${data.verb1}&favoriteThing=${data.favoriteThing}` +
-                `&favoriteFood=${data.favoriteFood}&activityToDo=${data.activityToDo}` +
-                `&changeAppearance=${data.changeAppearance}&favColor=${data.favColor}`;
-            const response = await fetch(apiUrl);
-            const result = await response.text();
-            return result;
         }
 
         const result = await generateMadLib(inputs);

@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/Lepic_Portrait.png";
+import { eightBall } from "../Service/8BallDataService.js";
 
 const MagicEightBall = () => {
 
     const [output, setOutput] = useState("");
     const [input, setInput] = useState("");
-
-    async function eightBall(input) {
-        const response = await fetch(`https://allforone2-asadawb9axdvc9a9.westus-01.azurewebsites.net/Magic8Ball/shakeBall/${input}`);
-        const data = await response.text();
-        console.log(data);
-        return data;
-    }
 
     const updateOutput = async () => {
         console.log("updateOutput");

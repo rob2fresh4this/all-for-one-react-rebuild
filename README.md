@@ -1,8 +1,13 @@
-# React + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Your Names:  Robert G.
 
-Currently, two official plugins are available:
+#### Date Revised  
+- [1/24/25]  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Exercise or Lab Name  
+[All For One - Build]
+
+# Review by: Aaron Robinson
+### Overall Feedback: The page works as intended and meets the requirements of the assignment. Although, I would try and add data valdiation for the time on the asking questions page. Maybe number vaidation and checking is the number is a valid hour time(1-12). Same for ReverseIt(alhpabetic). I like that your .js files are concise and neat. Other than those nitpicks, good job
+> 

@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import "../../app.css";
 import descendant from "../../assets/Assets_All-for-one/Bunny.png";
+import { addTwoNumbers } from "../Service/Add2SeviceData.js";
 
 const add_two_numbers = () => {
 
     const [output, setOutput] = useState('');
     const [num1, setNum1] = useState('');
     const [num2, setNum2] = useState('');
-
-    async function addTwoNumbers(num1, num2) {
-        const response = await fetch(`https://allforone2-asadawb9axdvc9a9.westus-01.azurewebsites.net/AddingTwoNumbers/addNumbers/${num1}/${num2}`);
-        const data = await response.text();
-        console.log(data);
-        return data;
-    }
 
     const updateOutput = async () => {
         console.log("updateOutput");
